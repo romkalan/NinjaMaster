@@ -29,6 +29,8 @@
 		AD0FA23F2A8D4FD500AC31F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD77E9A12A8F79AC00EBB545 /* Calculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculations.swift; sourceTree = "<group>"; };
 		AD77E9A42A8F79E700EBB545 /* BitMaskCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMaskCategory.swift; sourceTree = "<group>"; };
+		AD77E9A62A8F87F300EBB545 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		AD77E9A72A8F87F300EBB545 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
 		ADEC0A0F2A8E113500193A6E /* PlayerSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSprite.swift; sourceTree = "<group>"; };
 		ADEC0A162A8E135500193A6E /* MonsterSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterSprite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +72,7 @@
 				ADEC0A132A8E11EC00193A6E /* ViewControllers */,
 				ADEC0A142A8E11FB00193A6E /* Storyboards */,
 				AD0FA23C2A8D4FD500AC31F5 /* Assets.xcassets */,
+				AD77E9A82A8F87F800EBB545 /* Sounds */,
 			);
 			path = NinjaMaster;
 			sourceTree = "<group>";
@@ -81,6 +84,15 @@
 				AD77E9A42A8F79E700EBB545 /* BitMaskCategory.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		AD77E9A82A8F87F800EBB545 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				AD77E9A72A8F87F300EBB545 /* background-music-aac.caf */,
+				AD77E9A62A8F87F300EBB545 /* pew-pew-lei.caf */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		ADEC0A112A8E11D100193A6E /* Sprites */ = {

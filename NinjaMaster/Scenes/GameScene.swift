@@ -18,6 +18,7 @@ class GameScene: SKScene {
         physicsWorld.gravity = .zero
         physicsWorld.contactDelegate = self
         
+        addMusic()
         backgroundColor = SKColor.white
         
         player = PlayerSprite.populate(to: CGPoint(x: size.width * 0.1, y: size.height * 0.5))
@@ -51,6 +52,18 @@ class GameScene: SKScene {
         let actionMove = SKAction.move(to: realDest, duration: 2.0)
         let actionMoveDone = SKAction.removeFromParent()
         projectile.run(SKAction.sequence([actionMove, actionMoveDone]))
+        
+        addSounds()
+    }
+    
+    func addMusic() {
+        let backgroundMusic =  SKAudioNode(fileNamed: "background-music-aac.caf")
+        backgroundMusic.autoplayLooped =  true
+        addChild(backgroundMusic)
+    }
+    
+    func addSounds() {
+        run(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
     }
     
     func addPhysicsToProjectile() {
