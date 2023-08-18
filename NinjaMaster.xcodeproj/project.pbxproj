@@ -13,6 +13,8 @@
 		AD0FA23B2A8D4FD400AC31F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD0FA2392A8D4FD400AC31F5 /* Main.storyboard */; };
 		AD0FA23D2A8D4FD500AC31F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD0FA23C2A8D4FD500AC31F5 /* Assets.xcassets */; };
 		AD0FA2402A8D4FD500AC31F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD0FA23E2A8D4FD500AC31F5 /* LaunchScreen.storyboard */; };
+		AD77E9A22A8F79AC00EBB545 /* Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD77E9A12A8F79AC00EBB545 /* Calculations.swift */; };
+		AD77E9A52A8F79E700EBB545 /* BitMaskCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD77E9A42A8F79E700EBB545 /* BitMaskCategory.swift */; };
 		ADEC0A102A8E113500193A6E /* PlayerSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEC0A0F2A8E113500193A6E /* PlayerSprite.swift */; };
 		ADEC0A172A8E135500193A6E /* MonsterSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEC0A162A8E135500193A6E /* MonsterSprite.swift */; };
 /* End PBXBuildFile section */
@@ -25,6 +27,8 @@
 		AD0FA23A2A8D4FD400AC31F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD0FA23C2A8D4FD500AC31F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD0FA23F2A8D4FD500AC31F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AD77E9A12A8F79AC00EBB545 /* Calculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculations.swift; sourceTree = "<group>"; };
+		AD77E9A42A8F79E700EBB545 /* BitMaskCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMaskCategory.swift; sourceTree = "<group>"; };
 		ADEC0A0F2A8E113500193A6E /* PlayerSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSprite.swift; sourceTree = "<group>"; };
 		ADEC0A162A8E135500193A6E /* MonsterSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterSprite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,12 +65,22 @@
 			children = (
 				ADEC0A152A8E120F00193A6E /* App */,
 				ADEC0A122A8E11DC00193A6E /* Scenes */,
+				AD77E9A32A8F79B800EBB545 /* Services */,
 				ADEC0A112A8E11D100193A6E /* Sprites */,
 				ADEC0A132A8E11EC00193A6E /* ViewControllers */,
 				ADEC0A142A8E11FB00193A6E /* Storyboards */,
 				AD0FA23C2A8D4FD500AC31F5 /* Assets.xcassets */,
 			);
 			path = NinjaMaster;
+			sourceTree = "<group>";
+		};
+		AD77E9A32A8F79B800EBB545 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AD77E9A12A8F79AC00EBB545 /* Calculations.swift */,
+				AD77E9A42A8F79E700EBB545 /* BitMaskCategory.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		ADEC0A112A8E11D100193A6E /* Sprites */ = {
@@ -183,7 +197,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD0FA2362A8D4FD400AC31F5 /* GameScene.swift in Sources */,
+				AD77E9A22A8F79AC00EBB545 /* Calculations.swift in Sources */,
 				ADEC0A172A8E135500193A6E /* MonsterSprite.swift in Sources */,
+				AD77E9A52A8F79E700EBB545 /* BitMaskCategory.swift in Sources */,
 				ADEC0A102A8E113500193A6E /* PlayerSprite.swift in Sources */,
 				AD0FA2382A8D4FD400AC31F5 /* GameViewController.swift in Sources */,
 				AD0FA2302A8D4FD400AC31F5 /* AppDelegate.swift in Sources */,
