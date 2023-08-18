@@ -31,7 +31,7 @@ func sqrt(a: CGFloat) -> CGFloat {
 
 extension CGPoint {
     func length() -> CGFloat {
-        sqrt(x * x + y * y)
+        sqrt((x * x) + (y * y))
     }
     
     func normalized() -> CGPoint {
@@ -71,7 +71,7 @@ class GameScene: SKScene {
         let direction = offset.normalized()
         let shootAmount = direction * 1000
         let realDest = shootAmount + projectile.position
-        
+                
         let actionMove = SKAction.move(to: realDest, duration: 2.0)
         let actionMoveDone = SKAction.removeFromParent()
         projectile.run(SKAction.sequence([actionMove, actionMoveDone]))
