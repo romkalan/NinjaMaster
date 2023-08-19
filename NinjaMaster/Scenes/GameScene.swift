@@ -10,6 +10,8 @@ import GameplayKit
 
 class GameScene: SKScene {
     
+    var monsterDestroyed = 0
+    
     var player: SKSpriteNode!
     var monster: SKSpriteNode!
     var projectile: SKSpriteNode!
@@ -25,7 +27,7 @@ class GameScene: SKScene {
         addChild(player)
         
         run(SKAction.repeatForever(SKAction.sequence(
-            [SKAction.run(addMonster), SKAction.wait(forDuration: 0.5)]
+            [SKAction.run(addMonster), SKAction.wait(forDuration: 1)]
         )))
     }
     
@@ -88,14 +90,20 @@ class GameScene: SKScene {
         
         let actualDuration = random(min: CGFloat(2.0), max: CGFloat(4.0))
         let moveMonster = SKAction.move(
-            to: CGPoint(x: -monster.size.width/2, y: actualY),
+            to: CGPoint(x: -monster.size.width / 2, y: actualY),
             duration: TimeInterval(actualDuration)
         )
         let removeMonster = SKAction.removeFromParent()
 
-        let sequence = SKAction.sequence([moveMonster, removeMonster])
-        monster.run(sequence)
+        let loseAction = SKAction.run { [weak self] in
+            guard let self = self else { return }
+            let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
+            let gameOverScene = GameOverScene(size: size, won: false)
+            self.view?.presentScene(gameOverScene, transition: reveal)
+        }
         
+        let sequence = SKAction.sequence([moveMonster, loseAction, removeMonster])
+        monster.run(sequence)
     }
     
     func addPhysicsToMonster() {
@@ -109,6 +117,13 @@ class GameScene: SKScene {
     func projectileDidCollideWithMonster(projectile: SKSpriteNode, monster: SKSpriteNode) {
         projectile.removeFromParent()
         monster.removeFromParent()
+        
+        monsterDestroyed += 1
+        if monsterDestroyed > 30 {
+            let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
+            let gameOverScene = GameOverScene(size: size, won: true)
+            view?.presentScene(gameOverScene, transition: reveal)
+        }
     }
     
     func random() -> CGFloat {
