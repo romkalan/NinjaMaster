@@ -15,6 +15,7 @@
 		AD0FA2402A8D4FD500AC31F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD0FA23E2A8D4FD500AC31F5 /* LaunchScreen.storyboard */; };
 		AD77E9A22A8F79AC00EBB545 /* Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD77E9A12A8F79AC00EBB545 /* Calculations.swift */; };
 		AD77E9A52A8F79E700EBB545 /* BitMaskCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD77E9A42A8F79E700EBB545 /* BitMaskCategory.swift */; };
+		AD77E9AA2A90A93800EBB545 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD77E9A92A90A93800EBB545 /* GameOverScene.swift */; };
 		ADEC0A102A8E113500193A6E /* PlayerSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEC0A0F2A8E113500193A6E /* PlayerSprite.swift */; };
 		ADEC0A172A8E135500193A6E /* MonsterSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEC0A162A8E135500193A6E /* MonsterSprite.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		AD77E9A42A8F79E700EBB545 /* BitMaskCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMaskCategory.swift; sourceTree = "<group>"; };
 		AD77E9A62A8F87F300EBB545 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
 		AD77E9A72A8F87F300EBB545 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
+		AD77E9A92A90A93800EBB545 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		ADEC0A0F2A8E113500193A6E /* PlayerSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSprite.swift; sourceTree = "<group>"; };
 		ADEC0A162A8E135500193A6E /* MonsterSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterSprite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				AD0FA2352A8D4FD400AC31F5 /* GameScene.swift */,
+				AD77E9A92A90A93800EBB545 /* GameOverScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			files = (
 				AD0FA2362A8D4FD400AC31F5 /* GameScene.swift in Sources */,
 				AD77E9A22A8F79AC00EBB545 /* Calculations.swift in Sources */,
+				AD77E9AA2A90A93800EBB545 /* GameOverScene.swift in Sources */,
 				ADEC0A172A8E135500193A6E /* MonsterSprite.swift in Sources */,
 				AD77E9A52A8F79E700EBB545 /* BitMaskCategory.swift in Sources */,
 				ADEC0A102A8E113500193A6E /* PlayerSprite.swift in Sources */,
